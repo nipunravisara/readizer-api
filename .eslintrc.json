@@ -5,7 +5,7 @@
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaVersion": 9,
-        "project": "server/tsconfig.json",
+        "project": "readizer-api/tsconfig.json",
         "sourceType": "module"
     },
     "extends": [

@@ -15,6 +15,21 @@ export const getPosts = async (
   }
 };
 
+export const getPost = async (
+  req: express.Request,
+  res: express.Response
+): Promise<void> => {
+  const { id: postId } = req.params;
+
+  try {
+    const selectdPost = await post.findById(postId);
+    res.status(200).json(selectdPost);
+  } catch (error) {
+    res.status(404).json({ message: error.message });
+    return;
+  }
+};
+
 export const createPost = async (
   req: express.Request,
   res: express.Response
